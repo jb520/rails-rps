@@ -1,5 +1,5 @@
 class RockController < ApplicationController
-    def giraffe
-      render({ :plain => "howdy" })
+    def render_rock
+      render({ :template => "game_templates/play_rock" })
     end
 end
