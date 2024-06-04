@@ -7,6 +7,23 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <a href="/rock">Play Rock</a>
+      <a href="/paper">Play Paper</a>
+      <a href="/scissors">Play Scissors</a>
+    </div>
+
+     <%if @player_choice%>
+      <h2>We played <%= @player_choice %>!</h2>
+      <h2>They played <%= @computer_choice %>!</h2>
     <%= yield %>
+
+      <div class="navbar">
+        <a href="/">Rules</a>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+  
   </body>
 </html>
